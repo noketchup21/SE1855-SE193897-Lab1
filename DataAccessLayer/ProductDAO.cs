@@ -23,7 +23,7 @@ namespace DataAccessLayer
             //listProducts = new List<Product> { chai, chang, aniseed, chef, chefMix, grandma, uncle, northwoods, mishi, ikura };
         }
 
-        public List<Product> GetProducts()
+        public List<Product> GetProduct()
         {
             return listProducts;
         }
