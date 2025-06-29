@@ -1,22 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-namespace BusinessObjects
+namespace DataAccessLayer.DataAccessLayer;
+
+public partial class Category
 {
-    public partial class Category
-    {
-        public Category()
-        {
-            Products = new HashSet<Product>();
-        }
+    public int CategoryId { get; set; }
 
-        public Category(int catID, string catName)
-        {
-            this.CategoryId = catID;
-            this.CategoryName = catName;
-        }
+    public string CategoryName { get; set; } = null!;
 
-        public int CategoryId { get; set; }
-        public string CategoryName { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
-    }
+    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 }
